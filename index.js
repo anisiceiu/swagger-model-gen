@@ -1,9 +1,15 @@
 'use strict';
 
+
+require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 
-let rawdata = fs.readFileSync('./swagger.json');
+const generateModelFiles = () =>{
+
+let filepath = process.env.SwaggerFilePath;
+
+let rawdata = fs.readFileSync(filepath);
 let swagger = JSON.parse(rawdata);
 
 if (swagger && swagger.components && swagger.components.schemas) {
@@ -43,14 +49,20 @@ if (swagger && swagger.components && swagger.components.schemas) {
             fs.mkdirSync(folderPath);
         }
 
-        console.log(folderPath);
-
         fs.writeFile(`./models/${modelName}.ts`, fileContent, function(err) {
             if(err) {
                 return console.log(err);
             }
-            //console.log(`The file ${modelName} was saved!`);
+            
+            console.log(`The file ${modelName} was created!`);
         }); 
     }
+
+    console.log('Success!')
+
 }
 
+}
+
+
+module.exports = {generateModelFiles : generateModelFiles}

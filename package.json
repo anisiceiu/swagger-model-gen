@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/anisiceiu/swagger-model-gen/issues"
   },
-  "homepage": "https://github.com/anisiceiu/swagger-model-gen#readme"
+  "homepage": "https://github.com/anisiceiu/swagger-model-gen#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
 }
