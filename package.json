@@ -1,0 +1,26 @@
+{
+  "name": "swagger-model-gen",
+  "version": "1.0.0",
+  "description": "generate models typescript interfaces using swagger.json for using in your applications like react or angular etc.  ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anisiceiu/swagger-model-gen.git"
+  },
+  "keywords": [
+    "swagger",
+    "models",
+    "typescript",
+    "schema"
+  ],
+  "author": "Md Anisuzzaman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anisiceiu/swagger-model-gen/issues"
+  },
+  "homepage": "https://github.com/anisiceiu/swagger-model-gen#readme"
+}
